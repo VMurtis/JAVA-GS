@@ -134,8 +134,8 @@ Git instalado
 ---
 1️⃣ Clonar o Repositório
 
-git clone https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git
-cd SEU-REPOSITORIO
+git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/VMurtis/JAVA-GS.git)
+
 
 ---
 
