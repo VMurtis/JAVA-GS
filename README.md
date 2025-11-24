@@ -25,7 +25,7 @@ link do video: [https://youtu.be/2Ol0obkLBjc](https://www.youtube.com/watch?v=jU
 ## ✨ Funcionalidades Spring Security
 
 Autenticação & Autorização com Spring Security usando JWT.
-Criptografia de login e senha com RSA.
+Criptografia de senha.
 Cadastro de usuários com roles (ADMIN e USUARIO).
 CRUD básico de usuários.
 Proteção de endpoints por roles (ROLE_ADMIN e ROLE_USER).
