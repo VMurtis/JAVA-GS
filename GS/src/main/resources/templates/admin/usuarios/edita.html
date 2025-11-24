@@ -1,0 +1,78 @@
+<!-- templates/admin/usuarios/edita.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Editar Usuário</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+<h1>Editar Usuário</h1>
+
+<!-- Mensagens de sucesso/erro -->
+<div th:if="${sucesso}" th:text="${sucesso}" style="color:green;"></div>
+<div th:if="${erro}" th:text="${erro}" style="color:red;"></div>
+
+<!-- Formulário de edição -->
+<form th:action="@{/admin/usuarios/{id}(id=${usuarioId})}"
+      th:object="${usuario}"
+      method="post">
+
+    <!-- Hidden field para simular PUT -->
+    <input type="hidden" name="_method" value="put"/>
+
+    <div>
+        <label>Username:</label>
+        <input type="text" th:field="*{username}" />
+        <div th:if="${#fields.hasErrors('username')}"
+             th:errors="*{username}" style="color:red;"></div>
+    </div>
+
+    <div>
+        <label>Email:</label>
+        <input type="email" th:field="*{email}" />
+        <div th:if="${#fields.hasErrors('email')}"
+             th:errors="*{email}" style="color:red;"></div>
+    </div>
+
+    <div>
+        <label>Nome Completo:</label>
+        <input type="text" th:field="*{nomeCompleto}" />
+        <div th:if="${#fields.hasErrors('nomeCompleto')}"
+             th:errors="*{nomeCompleto}" style="color:red;"></div>
+    </div>
+
+    <div>
+        <label>Telefone:</label>
+        <input type="text" th:field="*{telefone}" />
+        <div th:if="${#fields.hasErrors('telefone')}"
+             th:errors="*{telefone}" style="color:red;"></div>
+    </div>
+
+    <div>
+        <label>Senha (deixe em branco para não alterar):</label>
+        <input type="password" th:field="*{senha}" />
+    </div>
+
+    <div>
+        <label>Ativo:</label>
+        <input type="checkbox" th:field="*{enabled}" />
+    </div>
+
+    <div>
+        <label>Roles:</label>
+        <div th:each="role : ${roles}">
+            <input type="checkbox"
+                   th:value="${role.id}"
+                   th:name="rolesIds"
+                   th:checked="${usuarioRolesIds != null} ? ${usuarioRolesIds.contains(role.id)} : false"/>
+            <span th:text="${role.nome}"></span>
+        </div>
+    </div>
+
+    <button type="submit">Atualizar Usuário</button>
+</form>
+
+</body>
+</html>

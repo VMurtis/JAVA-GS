@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Currículos</title>
+</head>
+<body>
+
+<h2>Lista de Currículos</h2>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Usuário</th>
+        <th>Status</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="c : ${curriculos}">
+        <td th:text="${c.id}"></td>
+        <td th:text="${c.usuario.nomeCompleto}"></td>
+        <td th:text="${c.status}"></td>
+        <td><a th:href="@{'/admin/curriculos/' + ${c.id}}">Visualizar</a></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista de Entrevistas</title>
+</head>
+<body>
+
+<h2>Lista de Entrevistas</h2>
+
+<a href="/admin/entrevistas/agendar">Agendar Entrevista</a>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Usuário</th>
+        <th>Data</th>
+        <th>Status</th>
+        <th>Ações</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="e : ${entrevistas}">
+        <td th:text="${e.id}"></td>
+        <td th:text="${e.usuario.nomeCompleto}"></td>
+        <td th:text="${e.data}"></td>
+        <td th:text="${e.status}"></td>
+        <td><a th:href="@{'/admin/entrevistas/' + ${e.id}}">Visualizar</a></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
