@@ -163,19 +163,12 @@ src/main/resources/
 ## Dependências
 
 spring-boot-starter-web
-
 spring-boot-starter-data-jpa
-
 spring-boot-starter-security
-
 spring-boot-starter-oauth2-authorization-server
-
 spring-boot-starter-thymeleaf
-
 spring-boot-starter-validation
-
 lombok
-
 java-jwt
 
 ojdbc11
