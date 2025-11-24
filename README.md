@@ -55,9 +55,7 @@ Senhas criptografadas com BCrypt
 ## Módulos do Sistema
 Cadastro, listagem, edição e exclusão (CRUD) de:
 
-Usuários
-Currículos
-Admin
+Usuários, Currículos e Admin
 
 ## Validações de Negócio
 
