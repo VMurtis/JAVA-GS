@@ -9,7 +9,7 @@
 
 
 ---
-link do video: https://youtu.be/2Ol0obkLBjc
+link do video: [https://youtu.be/2Ol0obkLBjc](https://www.youtube.com/watch?v=jU4t4XYTd44)
 ## 🧑‍💻 Autores
 
 <div align="center">
